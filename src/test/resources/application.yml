@@ -1,0 +1,28 @@
+# common config
+application:
+  version: 1.0.0
+  title: demo
+
+spring:
+  profiles:
+    active: test
+
+--- #local
+spring:
+  config:
+    activate:
+      on-profile: test
+
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: test
+
+logging:
+  level:
+    root: debug
+    org:
+      springframework:
+        boot:
+          autoconfigure: error

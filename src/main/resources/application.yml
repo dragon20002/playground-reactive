@@ -1,0 +1,27 @@
+# common config
+application:
+  version: 1.0.0
+  title: demo
+
+spring:
+  profiles:
+    active: local
+
+--- #local
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  data:
+    mongodb: #properties와 abstractMongodb 를 동시에 사용하면 충돌...
+      uri: mongodb+srv://***
+      database: abcd*
+
+logging:
+  level:
+    root: debug
+    org:
+      springframework:
+        boot:
+          autoconfigure: error
