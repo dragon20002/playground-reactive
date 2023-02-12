@@ -16,7 +16,7 @@ spring:
   data:
     mongodb: #properties와 abstractMongodb 를 동시에 사용하면 충돌...
       uri: mongodb+srv://***
-      database: abcd*
+      database: sample_analytics
 
 logging:
   level:
