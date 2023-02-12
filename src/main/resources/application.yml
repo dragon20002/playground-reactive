@@ -25,3 +25,5 @@ logging:
       springframework:
         boot:
           autoconfigure: error
+    sun.rmi.transport.tcp: error
+    org.mongodb.driver: error
